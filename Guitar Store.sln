@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35303.130
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Guitar Store", "Guitar Store\Guitar Store.csproj", "{E954CC29-F5BE-4FE2-BDEC-8C568E2A1626}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuitarStoreTest", "GuitarStoreTest\GuitarStoreTest.csproj", "{A03C7B4B-D15C-434B-A092-75CCA53F4F4C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E954CC29-F5BE-4FE2-BDEC-8C568E2A1626}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E954CC29-F5BE-4FE2-BDEC-8C568E2A1626}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E954CC29-F5BE-4FE2-BDEC-8C568E2A1626}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E954CC29-F5BE-4FE2-BDEC-8C568E2A1626}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A03C7B4B-D15C-434B-A092-75CCA53F4F4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A03C7B4B-D15C-434B-A092-75CCA53F4F4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A03C7B4B-D15C-434B-A092-75CCA53F4F4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A03C7B4B-D15C-434B-A092-75CCA53F4F4C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {23072088-F723-4258-BFC4-641B6640FA0D}
+	EndGlobalSection
+EndGlobal
