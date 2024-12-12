@@ -11,19 +11,20 @@ namespace Guitar_Store
         public string Email { get; set; }
         public string Password { get; set; }
 
+        public PayPalPayment()
+        {
+        }
+
         public bool ProcessPayment(decimal amount)
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"Processing PayPal payment of {amount:C}");
+            return true;
         }
 
         public string GetPaymentDetails()
         {
-            throw new NotImplementedException();
+            return $"PayPal Payment - Email: {Email}";
         }
 
-        public PayPalPayment()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

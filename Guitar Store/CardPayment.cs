@@ -13,19 +13,20 @@ namespace Guitar_Store
         public string CardHolderName { get; set; }
         public int CVV { get; set; }
 
+        public CardPayment()
+        {
+        }
+
         public bool ProcessPayment(decimal amount)
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"Processing card payment of {amount:C}");
+            return true;
         }
 
         public string GetPaymentDetails()
         {
-            throw new NotImplementedException();
+            return $"Card Payment - Card Holder: {CardHolderName}, Expiry: {ExpiryDate:MM/yy}";
         }
 
-        public CardPayment()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

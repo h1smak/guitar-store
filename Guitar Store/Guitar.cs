@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Guitar_Store
 {
-    public class Guitar
+    public class Guitar : ICloneable
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -18,12 +18,28 @@ namespace Guitar_Store
 
         public Guitar()
         {
-            throw new NotImplementedException();
         }
 
         public void UpdateStock(int quantity)
         {
-            throw new NotImplementedException();
-        }        
+            if (quantity < 0 && StockQuantity + quantity < 0)
+                throw new InvalidOperationException("Not enough stock.");
+            StockQuantity += quantity;
+        }
+
+        public object Clone()
+        {
+            return new Guitar
+            {
+                Id = this.Id,
+                Name = this.Name,
+                BrandName = this.BrandName,
+                Category = this.Category,
+                Price = this.Price,
+                Description = this.Description,
+                StockQuantity = this.StockQuantity
+            };
+        }
     }
+
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Guitar_Store
 {
-    public class Order
+    public class Order : IComparable<Order>, ICloneable
     {
         public int Id { get; set; }
         public User User { get; set; }
@@ -18,22 +18,45 @@ namespace Guitar_Store
 
         public Order()
         {
-            throw new NotImplementedException();
+            Items = new List<Guitar>();
+            OrderDate = DateTime.Now;
         }
 
         public void UpdateOrderStatus(OrderStatus newStatus)
         {
-            throw new NotImplementedException();
+            Status = newStatus;
         }
 
         public void AddItemToOrder(Guitar item)
         {
-            throw new NotImplementedException();
+            Items.Add(item);
+            TotalAmount += item.Price;
         }
 
         public decimal CalculateTotalAmount()
         {
-            throw new NotImplementedException();
+            TotalAmount = Items.Sum(i => i.Price);
+            return TotalAmount;
+        }
+
+        public int CompareTo(Order other)
+        {
+            return OrderDate.CompareTo(other.OrderDate);
+        }
+
+        public object Clone()
+        {
+            return new Order
+            {
+                Id = this.Id,
+                User = this.User,
+                Items = new List<Guitar>(this.Items.Select(item => (Guitar)item.Clone())),
+                Status = this.Status,
+                TotalAmount = this.TotalAmount,
+                OrderDate = this.OrderDate,
+                PaymentMethod = this.PaymentMethod
+            };
         }
     }
+
 }
